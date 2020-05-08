@@ -1,0 +1,7 @@
+version: '3.2'
+services:
+  genprogjs-env:
+    image: genprogjs-env
+    build:
+      context: .
+      dockerfile: Dockerfile
