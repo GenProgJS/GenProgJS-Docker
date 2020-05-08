@@ -1,6 +1,6 @@
 FROM node:8.16-jessie
 
-# prerequisites for bugsJS
+# prerequisites for BugsJS
 RUN apt-get update && \
 	apt-get install -y nano python3 screen zip unzip
 
@@ -56,7 +56,7 @@ ARG CACHE_DATE=2018-07-20
 
 VOLUME /data
 
-# prerequisites for genprogJS
+# prerequisites for GenprogJS
 RUN apt install -y python3-pip
 RUN apt install -y vim
 
@@ -65,13 +65,15 @@ RUN pip3 install xlrd
 RUN pip3 install esprima
 RUN pip3 install pathlib
 
-RUN git clone https://github.com/GenprogJS/GenprogJS.git /work/apr
-RUN git clone https://github.com/BugsJS/bug-dataset /work/apr/genprogJS/src/bug-dataset
+RUN git clone https://github.com/GenprogJS/GenprogJS.git /work/GenprogJS
+RUN git clone https://github.com/BugsJS/bug-dataset /work/bug-dataset
 
-RUN  mv /work/apr/genprogJS/src/bug-dataset/* /work/apr/genprogJS/src/
-RUN rm -r -f /work/apr/genprogJS/src/bug-dataset
+RUN mv /work/GenprogJS /work/genprogJS
+RUN  mv /work/bug-dataset/* /work/
+RUN rm -r -f /work/bug-dataset
 
-WORKDIR /work/apr/genprogJS/src/genprogJS/js
+WORKDIR /work/genprogJS/js
 RUN npm install
 
-WORKDIR /work/apr/genprogJS/src/genprogJS
+WORKDIR /work/genprogJS/
+RUN chmod +x run.sh
