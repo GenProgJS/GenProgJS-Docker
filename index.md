@@ -3,7 +3,7 @@ GenProgJS comes with a preconfigured Docker environment in which one can easily 
 
 
 ## Online appendix components
- - [GenProgJS source code](https://genprogjs.github.io/GenProgJS/)
+ - [GenProgJS homepage](https://genprogjs.github.io/GenProgJS/)
  - [Docker environment](https://genprogjs.github.io/GenProgJS-Docker/) (this page)
  - [Experiment data](https://genprogjs.github.io/experiments/)
 
