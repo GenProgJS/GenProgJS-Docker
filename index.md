@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## GenProgJS: a Baseline System for Test-based Automated Repair of JavaScript Programs 
+GenProgJS comes with a preconfigured Docker environment in which one can easily try it. We encourage fellow researchers to use this environment at first, thus skipping many configuration steps. However GenProgJS can operate on native installation as well, see the [documentation](https://github.com/GenProgJS/GenProgJS) for further details.
 
-You can use the [editor on GitHub](https://github.com/GenProgJS/GenProgJS-Docker/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Online appendix components
+ - [GenProgJS source code](https://genprogjs.github.io/GenProgJS/)
+ - [Docker environment](https://genprogjs.github.io/GenProgJS-Docker/) (this page)
+ - [Experiment data](https://genprogjs.github.io/experiments/)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Getting started
+To use the preconfigured environment, a Docker installation is required, it can be [downloaded](https://docs.docker.com/get-docker/) and installed for multiple platforms. 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+First clone the GenProgJS-Docker repository:
+```console
+$ git clone https://github.com/GenProgJS/GenProgJS-Docker
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+After navigating inside the cloned repository (`cd ./GenProgJS-Docker/`), you can find the `run.sh` and `run.cmd` executables. Of these, run the appropriate one for your operating system. So e.g. for Unix based operating systems, do:
+```console
+$ ./run.sh
+```
 
-### Jekyll Themes
+Docker will now prepare the environment and install every prerequisites. This might take a while, so now is the perfect moment to take a coffee break :coffee:. When the installation is complete, the script will also run the Docker image, and navigate the user to the `/work/genprogJS` folder. Here you should find another `run.sh` file, which will start GenProgJS on the Express 2 bug:
+```console
+$ ./run.sh
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GenProgJS/GenProgJS-Docker/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+For further details see the [homepage](https://github.com/GenProgJS/GenProgJS) of the tool. If you have any questions don't hesitate just [drop us a mail](mailto:csuvikv@inf.u-szeged.hu)!
