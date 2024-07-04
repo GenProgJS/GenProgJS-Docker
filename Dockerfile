@@ -1,4 +1,4 @@
-FROM node:8.16-jessie
+FROM node:14-buster
 
 # prerequisites for BugsJS
 RUN apt-get update && \
