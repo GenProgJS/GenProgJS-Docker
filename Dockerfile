@@ -1,4 +1,4 @@
-FROM node:14-buster
+FROM node:14-bullseye
 
 # prerequisites for BugsJS
 RUN apt-get update && \
